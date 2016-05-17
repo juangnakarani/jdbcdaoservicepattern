@@ -18,7 +18,7 @@ import javax.inject.Named;
  *
  * @author juang
  */
-@Named
+@Named("sysparamdao")
 public class SystemParameterDao {
 
     private Connection connection;

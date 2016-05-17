@@ -22,11 +22,11 @@ import javax.sql.DataSource;
  *
  * @author juang
  */
-@Named
+@Named("syspramservice")
 public class SystemParameterServiceImpl implements SystemParameterService{
     private Connection connection;
     @Inject
-    private SystemParameterDao systemParameterDao;
+    private @Named("sysparamdao") SystemParameterDao systemParameterDao;
     
     @Override
     public void setDataSource(DataSource dataSource){

@@ -5,7 +5,13 @@
  */
 package com.mycompany.jdbcdaoservicepattern.utils;
 
+import com.mycompany.jdbcdaoservicepattern.config.PgDataSource;
+import com.mycompany.jdbcdaoservicepattern.config.impl.PgDataSourceImpl;
+import com.mycompany.jdbcdaoservicepattern.dao.SystemParameterDao;
+import com.mycompany.jdbcdaoservicepattern.services.SystemParameterService;
+import com.mycompany.jdbcdaoservicepattern.services.impl.SystemParameterServiceImpl;
 import javax.ws.rs.ApplicationPath;
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 
 
@@ -18,5 +24,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class MyResourceConfig extends ResourceConfig {
     public MyResourceConfig() {
         packages("com.mycompany.jdbcdaoservicepattern.controller");
+
+      
     }
 }
