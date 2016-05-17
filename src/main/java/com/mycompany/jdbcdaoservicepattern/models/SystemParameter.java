@@ -10,17 +10,10 @@ package com.mycompany.jdbcdaoservicepattern.models;
  * @author juang
  */
 public class SystemParameter {
-    private int id;
     private String companyId;
-    private String codeInvoice;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private boolean autoinvno;
+    private int nxtinvno;
+    private String nvpref;
 
     public String getCompanyId() {
         return companyId;
@@ -30,12 +23,28 @@ public class SystemParameter {
         this.companyId = companyId;
     }
 
-    public String getCodeInvoice() {
-        return codeInvoice;
+    public boolean isAutoinvno() {
+        return autoinvno;
     }
 
-    public void setCodeInvoice(String codeInvoice) {
-        this.codeInvoice = codeInvoice;
+    public void setAutoinvno(boolean autoinvno) {
+        this.autoinvno = autoinvno;
+    }
+
+    public int getNxtinvno() {
+        return nxtinvno;
+    }
+
+    public void setNxtinvno(int nxtinvno) {
+        this.nxtinvno = nxtinvno;
+    }
+
+    public String getNvpref() {
+        return nvpref;
+    }
+
+    public void setNvpref(String nvpref) {
+        this.nvpref = nvpref;
     }
     
 }
