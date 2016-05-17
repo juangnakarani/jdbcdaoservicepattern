@@ -15,8 +15,8 @@ import org.glassfish.jersey.server.ResourceConfig;
  * @author juang
  */ 
 @ApplicationPath("resources")
-public class MyApplication extends ResourceConfig {
-    public MyApplication() {
+public class MyResourceConfig extends ResourceConfig {
+    public MyResourceConfig() {
         packages("com.mycompany.jdbcdaoservicepattern.controller");
     }
 }

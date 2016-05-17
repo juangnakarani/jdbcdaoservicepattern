@@ -5,10 +5,15 @@
  */
 package com.mycompany.jdbcdaoservicepattern.services;
 
+import com.mycompany.jdbcdaoservicepattern.models.SystemParameter;
+import java.util.List;
+import javax.sql.DataSource;
+
 /**
  *
  * @author juang
  */
 public interface SystemParameterService {
-    
+    void setDataSource(DataSource dataSource);
+    List<SystemParameter> getSystemParameters();
 }
