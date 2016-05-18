@@ -14,7 +14,7 @@ import org.postgresql.ds.PGPoolingDataSource;
  *
  * @author juang
  */
-@Named("datasource")
+//@Named("datasource")
 public class PgDataSourceImpl implements PgDataSource{
     private PGPoolingDataSource dataSource;
     
@@ -25,6 +25,7 @@ public class PgDataSourceImpl implements PgDataSource{
         dataSource.setServerName("10.26.5.12");
         dataSource.setDatabaseName("db_wbfs_dxnpharma");
         dataSource.setUser("dxndba");
+        dataSource.setPortNumber(5433);
         dataSource.setPassword("dxnoke");
         dataSource.setMaxConnections(10);
         return dataSource;

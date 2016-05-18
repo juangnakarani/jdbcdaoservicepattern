@@ -13,12 +13,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Named;
+import org.jvnet.hk2.annotations.Service;
 
 /**
  *
  * @author juang
  */
-@Named("sysparamdao")
+//@Service @Named
 public class SystemParameterDao {
 
     private Connection connection;

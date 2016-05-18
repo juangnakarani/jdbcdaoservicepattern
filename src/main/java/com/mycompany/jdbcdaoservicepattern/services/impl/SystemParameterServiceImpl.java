@@ -17,21 +17,24 @@ import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.sql.DataSource;
+import org.jvnet.hk2.annotations.Service;
 
 /**
  *
  * @author juang
  */
-@Named("syspramservice")
+//@Named("syspramservice")
+@Service @Named
 public class SystemParameterServiceImpl implements SystemParameterService{
     private Connection connection;
-    @Inject
-    private @Named("sysparamdao") SystemParameterDao systemParameterDao;
+ 
+    private SystemParameterDao systemParameterDao;
     
     @Override
     public void setDataSource(DataSource dataSource){
         try {
             connection = dataSource.getConnection();
+            systemParameterDao = new SystemParameterDao();
             systemParameterDao.setConnection(connection);
         } catch (SQLException ex) {
             Logger.getLogger(SystemParameterServiceImpl.class.getName()).log(Level.SEVERE, null, ex);
