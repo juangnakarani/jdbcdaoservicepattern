@@ -60,7 +60,7 @@ public class SystemParameterDao {
             SystemParameter systemParameter = new SystemParameter();
             systemParameter.setCompanyId(rs.getString("company_id"));
             systemParameter.setAutoinvno(rs.getBoolean("autoinvno"));
-            systemParameter.setNvpref(rs.getString("nvpref"));
+            systemParameter.setNvpref(rs.getString("invpref"));
             systemParameter.setNxtinvno(rs.getInt("nxtinvno"));
             list.add(systemParameter);
         }

@@ -12,6 +12,7 @@ import com.mycompany.jdbcdaoservicepattern.services.SystemParameterService;
 import com.mycompany.jdbcdaoservicepattern.services.impl.SystemParameterServiceImpl;
 import javax.ws.rs.ApplicationPath;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
 /**
@@ -23,6 +24,7 @@ public class MyResourceConfig extends ResourceConfig {
 
     public MyResourceConfig() {
         packages("com.mycompany.jdbcdaoservicepattern.controller");
+        register(JacksonFeature.class);
         register(new AbstractBinder() {
             @Override
             protected void configure() {
